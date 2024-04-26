@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Usage</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      p {
+        margin: 10px 0;
+        font-size: 16px;
+      }
+
+      .usage-info {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>API Usage</h1>
+      <div class="usage-info">
+        <p><strong>連線數量:</strong> {{ usage_data.connections }}</p>
+        <p><strong>已使用流量:</strong> {{ usage_data.bytes }}</p>
+        <p><strong>每日流量限制:</strong> {{ usage_data.limit_bytes }}</p>
+        <p><strong>剩餘可使用流量:</strong> {{ usage_data.remaining_bytes }}</p>
+      </div>
+    </div>
+  </body>
+</html>
